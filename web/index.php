@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-3 menu">
       <ul>
-      	<li onclick="location.href = 'home.php';">Home</li>
+      	<li onclick="location.href = 'index.php';">Home</li>
         <li onclick="location.href = 'assignments.html';">Assignments</li>
       </ul>
     </div>

@@ -3,7 +3,11 @@ function clickMe() {
 }
 
 function changeColor() {
-	$("#div1").css("background-color", $("input:text").val());
+
+	var color = $("#txtColor").val();
+	console.log(color);
+
+	$("#div1").css("background-color", color);
 }
 
 function toggleFade() {
