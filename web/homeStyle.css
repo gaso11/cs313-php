@@ -36,6 +36,7 @@ img {
 
 .menu ul {
     list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -49,6 +50,18 @@ img {
     text-align: center;
     cursor: pointer;
     transition-duration: .5s;
+}
+
+.hwlinks {
+    float: center;
+}
+
+.hwlinks h1 {
+    float: right;
+}
+
+.hwlinks li {
+    background-color: red; 
 }
 
 a {
