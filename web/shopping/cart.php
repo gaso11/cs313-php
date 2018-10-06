@@ -2,14 +2,15 @@
     <title>Surplus Blitz Cart</title>
     <link rel="stylesheet" href="browse.css" type="text/css">
 </head>
-
+    
 <?php
 session_start();
 
 $cart = $_SESSION["cart"];
 
 /* DISPLAY */
-
+echo "<br>";
+echo "<div class=\"cart\">";
 echo "<h1>";
 echo "You have selected the following items:";
 echo "</h1>";
@@ -25,10 +26,15 @@ for ($x = 0; $x < sizeof($cart); $x++)
     }
 }
 
+echo "<h3>";
+echo "Click an item to remove it from the list";
+echo "</h3>";
+
 echo "<p>";
 echo "<button type=\"button\"><a href=\"browse.php\">Back to Shopping</a></button><br><br>";
 echo "<button type=\"button\"><a href=\"checkout.php\">Go to checkout</a></button><br><br>";
 echo "</p>";
+echo "</div>";
 
 ?>
 

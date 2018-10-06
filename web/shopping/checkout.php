@@ -13,7 +13,7 @@ $cart = $_SESSION["cart"];
 $total = 0;
 
 /* DISPLAY */
-
+echo "<div class=\"cart\">";
 echo "<h1>";
 echo "You have selected the following items:";
 echo "</h1>";
@@ -53,6 +53,6 @@ echo "</h3>";
 <div class="center">
     <button type="button"><a href="browse.php">Back to Shopping</a></button>
 </div>
-
+</div> <!--Was created in php-->
 </body>
 </html>

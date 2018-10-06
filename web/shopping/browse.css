@@ -53,6 +53,16 @@ form {
     padding: 0px 10px;
 }
 
+.cart {
+    border-style: outset;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 70px 0;
+    background-color: #98ff98;
+    border-width: 7px;
+}
+
 /* W3 CSS popup */
 /* Container */
 .popup {

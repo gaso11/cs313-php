@@ -32,7 +32,9 @@ function test_input($data) {
 <body>
 
 <?php
-
+/* Seperate php sections just in case */
+echo "<br>";
+echo "<div class=\"cart\">";
 echo "<h1>Thank you for your purchase of:</h1>";
 for ($x = 0; $x < sizeof($cart); $x++)
 {
@@ -46,7 +48,16 @@ for ($x = 0; $x < sizeof($cart); $x++)
 echo "<br><h3>Shipping to:</h3>";
 echo "<p>$addrNum $stName<br>";
 echo "$city, $state $zip</p>";
+    
+/* Clear cart for further shopping */
+/* This will cause the back arrow to show errors which can be easily fixed, like I did on browse.php ln 4 */
+session_unset();
 
+echo "<p>";
+echo "<button type=\"button\"><a href=\"browse.php\">Back to Shopping</a></button><br><br>";
+echo "</p>";
+echo "</div>";
+    
 ?>
 
 </body>
