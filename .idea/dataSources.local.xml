@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="postgres://ipchmgfcfqehft:c1352cff50e393c9840e16db4fd3e30b94d63115406370f24ebd4a94c83fdc88@ec2-23-21-147-71.compute-1.amazonaws.com:5432/d83p367gs04eiu" uuid="a68ab31a-1155-4f03-a9d3-5487d16d1bed">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>ipchmgfcfqehft</user-name>
+    </data-source>
+  </component>
+</project>
