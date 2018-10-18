@@ -33,7 +33,6 @@ function getCarsDB() {
   
 $cars = getCarsDB();
 var_dump($cars);
-exit;
 
 ?>
 
