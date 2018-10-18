@@ -1,3 +1,4 @@
+<!-- THIS WILL ONLY WORK WHEN PUSHED TO HEROKU -->
 <?php
 
 function dbConnect(){
@@ -29,10 +30,28 @@ function getCarsDB() {
     $stmt->closeCursor();
     return $data;
   }
-  $cars = getCarsDB();
-  var_dump($cars);
-  exit;
+  
+$cars = getCarsDB();
+var_dump($cars);
+exit;
 
 ?>
 
 <!DOCTYPE html>
+<html>
+<head>
+    <title>Surplus Blitz</title>
+    <link rel="stylesheet" href="carRentalBrowse.css" type="text/css">
+</head>
+<!--Header from https://codepen.io/linux/pen/aEQKWP -->
+<header>
+    <div class="header">
+        <h1>Car Rental Service</h1>
+        <h3>At new all low prices!</h3>
+        <br>
+        <button>Test Button</button>
+    </div>
+</header>
+<body>
+    <p>Hello World</p>
+</body>
