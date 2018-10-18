@@ -51,5 +51,5 @@ var_dump($cars);
     </div>
 </header>
 <body>
-    <p>Hello World</p>
+    
 </body>
