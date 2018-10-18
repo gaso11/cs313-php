@@ -37,10 +37,9 @@ exit;
 
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Surplus Blitz</title>
+    <title>Car Rental Service</title>
     <link rel="stylesheet" href="carRentalBrowse.css" type="text/css">
 </head>
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
