@@ -43,8 +43,8 @@ $cars = getCarsDB();
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
 <header>
     <div class="header">
-        <h1>Car Rental Service</h1><br>
-        <h3>At new all low prices!</h3>
+        <h1 class="bigger">Car Rental Service</h1><br>
+        <h3 class="bigger">At new all low prices!</h3>
         <br><br>
         <button>Test Button</button>
     </div>
