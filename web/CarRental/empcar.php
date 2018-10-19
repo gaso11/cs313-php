@@ -49,24 +49,48 @@ $cars = getCarsDB();
 <body>
     
     <div class="carTable">
-        <h2>Cars Avaliable for Rent</h2>
+        <h2>List of Cars</h2>
         <ul class="table">
             <li class="table-header">
-                <div class="col col-1">Make</div>
-                <div class="col col-2">Model</div>
-                <div class="col col-3">Cost per day</div>
+                <div class="col col-1">Car ID</div>
+                <div class="col col-2">Make</div>
+                <div class="col col-3">Model</div>
+                <div class="col col-4">Cost per day</div>
+                <div class="col col-5">Mileage</div>
+                <div class="col col-6">Time Start</div>
+                <div class="col col-7">Time End</div>
+                <div class="col col-8">Rental Status</div>
+                <div class="col col-9">Repair Status</div>
+                <div class="col col-10">Renter's First</div>
+                <div class="col col-11">Renter's Last</div>
             </li>
             <?php
     
             foreach($cars as $car) 
             {    
                 echo "<li class=\"table-row\">";
-                echo "<div class=\"col col-1\" data-label=\"Make\">" . 
+                echo "<div class=\"col col-1\" data-label=\"CarID\">" . 
+                    $car['carid'] . "</div>";
+                echo "<div class=\"col col-2\" data-label=\"Make\">" . 
                     $car['make'] . "</div>";
-                echo "<div class=\"col col-2\" data-label=\"Model\">" . 
+                echo "<div class=\"col col-3\" data-label=\"Model\">" . 
                     $car['model'] . "</div>";
-                echo "<div class=\"col col-3\" data-label=\"Cost\">" . 
+                echo "<div class=\"col col-4\" data-label=\"Cost\">" . 
                     "$" . $car['cost'] . "</div>";
+                echo "<div class=\"col col-5\" data-label=\"Mileage\">" . 
+                    $car['mileage'] . "</div>";
+                echo "<div class=\"col col-6\" data-label=\"TimeSt\">" . 
+                    $car['timestart'] . "</div>";
+                echo "<div class=\"col col-7\" data-label=\"TimeEnd\">" . 
+                    $car['timeend'] . "</div>";
+                echo "<div class=\"col col-8\" data-label=\"RentalSts\">" . 
+                    $car['rentalstatus'] . "</div>";
+                echo "<div class=\"col col-9\" data-label=\"RepairSts\">" . 
+                    $car['repairstatus'] . "</div>";
+                echo "<div class=\"col col-10\" data-label=\"RenterF\">" . 
+                    $car['renterfirstname'] . "</div>";
+                echo "<div class=\"col col-11\" data-label=\"RenterL\">" . 
+                    $car['renterlastname'] . "</div>";
                 echo "</li>";
             }
             

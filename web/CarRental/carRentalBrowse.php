@@ -63,7 +63,7 @@ $cars = getCarsDB();
     
             foreach($cars as $car) 
             {
-                if ($car['repairstatus'] == "Okay")
+                if ($car['repairstatus'] == "Okay" && $car['rentalstatus'] == "Open")
                 {
                     
                 echo "<li class=\"table-row\">";
