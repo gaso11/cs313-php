@@ -46,7 +46,7 @@ $cars = getCarsDB();
         <h1>Car Rental Service</h1><br>
         <h3>At new all low prices!</h3>
         <br><br>
-        <button>Test Button</button>
+        <button>Login</button>
     </div>
 </header> 
 <body>
@@ -69,7 +69,7 @@ $cars = getCarsDB();
                 echo "<div class=\"col col-2\" data-label=\"Model\">" . 
                     $car['model'] . "</div>";
                 echo "<div class=\"col col-3\" data-label=\"Cost\">" . 
-                    $car['cost'] . "</div>";
+                    "$" . $car['cost'] . "</div>";
                 echo "</li>";
             }
             
