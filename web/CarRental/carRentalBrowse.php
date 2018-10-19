@@ -79,5 +79,6 @@ $cars = getCarsDB();
             
             ?>
         </ul>
+        <br>
     </div>
 </body>

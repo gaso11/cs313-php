@@ -81,19 +81,48 @@ li {
     }
 
 .col-1 {
-    flex-basis: 10%;
+    flex-basis: 9%;
 }
     
 .col-2 {
-    flex-basis: 40%;
+    flex-basis: 9%;
 }
     
 .col-3 {
-    flex-basis: 25%;
+    flex-basis: 9%;
 }
 
 .col-4 {
-    flex-basis: 25%;
+    flex-basis: 9%;
+}
+
+.col-5 {
+    flex-basis: 9%;
+}
+
+.col-6 {
+    flex-basis: 9%;
+}
+
+.col-7 {
+    flex-basis: 9%;
+}
+
+.col-8 {
+    flex-basis: 9%;
+}
+
+.col-9 {
+    flex-basis: 9%;
+}
+
+.col-10 {
+    flex-basis: 9%;
+}
+
+/* 100/11 doesn't divide very nicely */
+.col-11 {
+    flex-basis: 9%;
 }
 
 @media all and (max-width: 767px) {
