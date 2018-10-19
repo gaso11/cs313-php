@@ -56,7 +56,8 @@ var_dump($cars);
     echo "<table>";
     while ($carRow = pg_fetch_array($cars)) 
     {
-        echo "<tr><td>".($carRow['make'])."</td></tr>";    
+        echo "<tr><td>".($carRow['make'])."</td></tr>";
+        echo "<p>I am doing something</p>";
     }
     echo "</table>";
     
