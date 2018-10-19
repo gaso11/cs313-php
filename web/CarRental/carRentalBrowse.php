@@ -32,7 +32,6 @@ function getCarsDB() {
   }
   
 $cars = getCarsDB();
-var_dump($cars);
 
 ?>
 
@@ -54,8 +53,7 @@ var_dump($cars);
     <?php
     
     echo "<table>";
-    $arr = pg_fetch_array($cars, 0, PGSQL_NUM);
-    echo $arr[0] . " <- Row 1";
+    var_dump($cars);
     echo "</table>";
     
     ?>
