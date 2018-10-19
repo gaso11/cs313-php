@@ -53,7 +53,9 @@ $cars = getCarsDB();
     <?php
     
     echo "<table>";
-    var_dump($cars);
+    foreach($cars as $car) {
+        echo "<td><tr>" . $car['make'];
+    }
     echo "</table>";
     
     ?>
