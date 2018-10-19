@@ -11,7 +11,7 @@ header {
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 85% 85% / 30%;
+    border-radius: 0 0 85% 25% / 30%;
 }
 
 header .header{
