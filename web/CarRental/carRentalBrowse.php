@@ -54,7 +54,8 @@ $cars = getCarsDB();
     
     echo "<table>";
     foreach($cars as $car) {
-        echo "<tr><td>" . $car['make'] . " " . $car['model'] . "</td></tr>";
+        echo "<tr><td>" . $car['make'] . " " . $car['model'] . 
+            " at $$" . $car['cost'] . " per day" . "</td></tr>";
     }
     echo "</table>";
     
