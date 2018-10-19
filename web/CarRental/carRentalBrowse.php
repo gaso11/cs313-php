@@ -22,7 +22,6 @@ function dbConnect(){
   }
 
 function getCarsDB() {
-    /* This works, but testing search
     $db = dbConnect();
     $sql = "SELECT * FROM Cars";
     $stmt = $db->prepare($sql);
@@ -30,29 +29,6 @@ function getCarsDB() {
     $data = $stmt->fetchAll(PDO::FETCH_NAMED);
     $stmt->closeCursor();
     return $data;
-    */
-    $output = '';
-    if (isset($_POST['search'])) {
-        $searchq = $_POST['search'];
-        $searchq = preg_replace("#[^0-9a-z]#i", "", $searchq);
-    
-        $db = $dbConnect();
-        $query = pg_query($db, "SELECT * FROM Cars WHERE model 
-            LIKE '%$searchq%' OR make LIKE '%$searchq%'");
-        $count = pg_num_rows($query);
-        if ($count == 0) {
-            $output = 'No Results Found';
-        }else{
-            while ($row = pg_fetch_array($query)){
-                $make = $row['make'];
-                $model = $row['model'];
-                $id = $row['id'];
-                
-                $ouput .= '<div> '.$make.' '.$model.'</div>';
-            }
-        }
-    }
-    
   }
   
 $cars = getCarsDB();
@@ -80,8 +56,6 @@ $cars = getCarsDB();
         <input type="text" name="search" placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>
-    
-    <?php print("$output");?>
     
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
