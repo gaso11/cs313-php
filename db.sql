@@ -50,14 +50,45 @@ CREATE TABLE Employees (
     LastName varchar(255)
 );
 
-/* Try to put in a default value */
-UPDATE Employees
-SET FirstName='Evan', LastName='Lewis'
-WHERE EmpID = 1;
-
 /* Create a view for this too */
+/* After reading Week 05, this is not needed */
 CREATE VIEW EmpView AS
 SELECT EmpID, FirstName, LastName
 FROM Employees;
-/* The default value didn't give me an error, but I don't
-see it in the view, maybe I did that wrong? */
+
+/*
+ _    _           _      _____ 
+| |  | |         | |    |  ___|
+| |  | | ___  ___| | __ |___ \ 
+| |/\| |/ _ \/ _ \ |/ /     \ \
+\  /\  /  __/  __/   <  /\__/ /
+ \/  \/ \___|\___|_|\_\ \____/
+*/
+
+/* Place values in  */
+INSERT INTO Employees (FirstName, LastName) VALUES ('Evan', 'Lewis');
+
+/* CarID, TimeStart and TimeEnd don't need to be set */
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(39, 22125.3, 'Nissan', 'Versa', 'Open', 'Okay');
+
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(50, 22191.1, 'Hyundai', 'Santa Fe', 'Open', 'Okay');
+
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(45, 22687.3, 'Ford', 'Fiesta', 'Open', 'Okay');
+
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(43, 23016.5, 'Kia', 'Soul', 'Open', 'Okay');
+
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(129, 23571.1, 'Ford', 'F150', 'Open', 'Okay');
+
+INSERT INTO Cars 
+(Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+(100, 25000, 'Ford', 'Transit', 'Closed', 'In Shop');
