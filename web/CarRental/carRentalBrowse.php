@@ -50,14 +50,38 @@ $cars = getCarsDB();
     </div>
 </header> 
 <body>
-    <?php
     
+    <div class="carTable">
+        <h2>Cars Avaliable for Rent</h2>
+        <ul class="table">
+            <li class="table-header">
+                <div class="col col-1">Make</div>
+                <div class="col col-2">Model</div>
+                <div class="col col-3">Cost per day</div>
+            </li>
+            <?php
+    
+            foreach($cars as $car) 
+            {
+                echo "<li class=\"table-row\">";
+                echo "<div class=\"col col-1\" data-label=\"Make\">" . 
+                    $car['Make'] . "</div>";
+                echo "<div class=\"col col-2\" data-label=\"Model\">" . 
+                    $car['Model'] . "</div>";
+                echo "<div class=\"col col-3\" data-label=\"Cost\">" . 
+                    $car['Cost'] . "</div>";
+                echo "</li>";
+            }
+        
+    /*
     echo "<table>";
     foreach($cars as $car) {
         echo "<tr><td>" . $car['make'] . " " . $car['model'] . 
             " at $" . $car['cost'] . " per day" . "</td></tr>";
     }
     echo "</table>";
-    
-    ?>
+    */
+            ?>
+        </ul>
+    </div>
 </body>
