@@ -65,11 +65,11 @@ $cars = getCarsDB();
             {
                 echo "<li class=\"table-row\">";
                 echo "<div class=\"col col-1\" data-label=\"Make\">" . 
-                    $car['Make'] . "</div>";
+                    $car['make'] . "</div>";
                 echo "<div class=\"col col-2\" data-label=\"Model\">" . 
-                    $car['Model'] . "</div>";
+                    $car['model'] . "</div>";
                 echo "<div class=\"col col-3\" data-label=\"Cost\">" . 
-                    $car['Cost'] . "</div>";
+                    $car['cost'] . "</div>";
                 echo "</li>";
             }
         
