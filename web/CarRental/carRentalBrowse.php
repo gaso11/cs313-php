@@ -44,12 +44,21 @@ var_dump($cars);
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
 <header>
     <div class="header">
-        <h1>Car Rental Service</h1>
+        <h1>Car Rental Service</h1><br>
         <h3>At new all low prices!</h3>
-        <br>
+        <br><br>
         <button>Test Button</button>
     </div>
-</header>
+</header> 
 <body>
+    <?php
     
+    echo "<table>";
+    while ($carRow = pg_fetch_array($cars)) 
+    {
+        echo "<tr><td>".($carRow['make'])."</td></tr>";    
+    }
+    echo "</table>";
+    
+    ?>
 </body>

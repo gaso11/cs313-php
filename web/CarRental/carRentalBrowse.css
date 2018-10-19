@@ -36,3 +36,11 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+h1 {
+    font: 30px;
+}
+
+h3 {
+    font: 20px;
+}
