@@ -46,7 +46,7 @@ $cars = getCarsDB();
         <h1>Car Rental Service</h1><br>
         <h3>At new all low prices!</h3>
         <br><br>
-        <button>Login</button>
+        <button><a href="empcar.php">Login</a></button>
     </div>
 </header> 
 <body>
@@ -63,6 +63,9 @@ $cars = getCarsDB();
     
             foreach($cars as $car) 
             {
+                if ($car['repairstatus'] == "Okay")
+                {
+                    
                 echo "<li class=\"table-row\">";
                 echo "<div class=\"col col-1\" data-label=\"Make\">" . 
                     $car['make'] . "</div>";
@@ -71,6 +74,7 @@ $cars = getCarsDB();
                 echo "<div class=\"col col-3\" data-label=\"Cost\">" . 
                     "$" . $car['cost'] . "</div>";
                 echo "</li>";
+                }
             }
             
             ?>
