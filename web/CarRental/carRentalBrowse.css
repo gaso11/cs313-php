@@ -5,13 +5,13 @@ body{height: 900px;}
 header {
     background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
     text-align: center;
-    width: 100%;
+    width: 50%;
     height: auto;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 85% 25% / 30%;
+    border-radius: 0 0 25% 25% / 30%;
 }
 
 header .header{
