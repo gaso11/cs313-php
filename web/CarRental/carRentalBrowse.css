@@ -37,10 +37,10 @@ button:hover {
     cursor: pointer;
 }
 
-h1 {
+header h1 {
     font: 50px;
 }
 
-h3 {
+header h3 {
     font: 30px;
 }
