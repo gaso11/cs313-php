@@ -51,9 +51,9 @@ $cars = getCarsDB();
 </header> 
 <body>
     
-    <div class="carTable">
+    <div class="container">
         <h2>Cars Avaliable for Rent</h2>
-        <ul class="table">
+        <ul class="responsive-table>
             <li class="table-header">
                 <div class="col col-1">Make</div>
                 <div class="col col-2">Model</div>
