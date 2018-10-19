@@ -61,6 +61,7 @@ h3 {
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+        background-color: #FFFFFF;
     }
     .table-header {
         background-color: #95A5A6;
