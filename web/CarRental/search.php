@@ -22,11 +22,10 @@
     if (empty($_POST["search"]))
     {
         echo "POST is empty: " . $_POST["search"];
-        return;
     }
     else
     {
-        $_POST["search"];
+        echo $_POST["search"];
     }
 /*
     else
