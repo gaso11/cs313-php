@@ -25,7 +25,11 @@ function getCarsDB() {
     $db = dbConnect();
     $output = 'Hello World';
     
-    if (isset($_POST['search']))
+  }
+  
+$cars = getCarsDB();
+
+if (isset($_POST['search']))
     {
         $searchq = $_POST['search'];
         $searchq = preg_replace("#[^0-9a-z]#i", "", $searchq);
@@ -50,10 +54,6 @@ function getCarsDB() {
         }
         
     }
-    
-  }
-  
-$cars = getCarsDB();
 
 ?>
 
