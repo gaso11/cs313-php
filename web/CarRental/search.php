@@ -21,7 +21,7 @@
     
     if (empty($_POST["search"]))
     {
-        echo "POST is empty: " . $_POST["search"];
+        header("Location: carRentalBrowse.php");
     }
     else
     {
@@ -61,8 +61,8 @@
         <input type="text" id="search" name="search" 
                placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
-    </form>
-    
+    </form><br>
+    <button><a href="carRentalBrowse.php">Back To Full List</a></button><br>
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
         <ul class="table">
