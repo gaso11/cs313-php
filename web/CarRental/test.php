@@ -42,6 +42,7 @@ $cars = getCarsDB();
     <script src="jquery.js"></script>
     <script src="search.js"></script>
 </head>
+    
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
 <header>
     <div class="header">
@@ -54,7 +55,7 @@ $cars = getCarsDB();
 <body>
     
     <!-- Searching -->
-    <form action="search.php" method="post">
+    <form action="search.php" method="get">
         <input type="text" name="search" placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>

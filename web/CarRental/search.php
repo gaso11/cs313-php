@@ -1,5 +1,4 @@
 <?php
-/*
     function dbConnect(){
     try {
       $url = getenv('DATABASE_URL');
@@ -19,8 +18,8 @@
       exit;
     }
   }
-
     echo "Hi";
+    /*
     if (empty($_POST["search"]))
     {
         echo "Nothing to search yet";
@@ -38,6 +37,5 @@
         $stmt->closeCursor();
         echo json_encode($data);
     }
-*/
-echo "Hello World";
+    */
 ?>
