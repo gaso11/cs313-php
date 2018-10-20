@@ -18,11 +18,10 @@
       exit;
     }
   }
-    echo "Hi";
     
     if (empty($_GET["search"]))
     {
-        echo $_GET;
+        echo $_GET["search"];
         return;
     }
 /*
