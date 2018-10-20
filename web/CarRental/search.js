@@ -7,7 +7,7 @@ $(document).ready(function() {
         $.ajax({
             type : 'POST',
             url  : 'search.php',
-            data : data,
+            data : "Ford",
             
         })
         
