@@ -52,11 +52,12 @@ $cars = getCarsDB();
 <body>
     
     <!-- Searching -->
+    <br>
     <form action="search.php" method="post">
         <input type="text" name="search" placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>
-    
+    <br>
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
         <ul class="table">
