@@ -25,11 +25,6 @@
     }
     else
     {
-        echo $_POST["search"];
-    }
-/*
-    else
-    {
         $search = $_POST["search"]
         $db = dbConnect();
         $sql = "SELECT * FROM Cars WHERE 
@@ -40,5 +35,4 @@
         $stmt->closeCursor();
         echo json_encode($data);
     }
-    */
 ?>
