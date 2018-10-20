@@ -22,7 +22,7 @@
     
     if (empty($_GET["search"]))
     {
-        echo "Nothing to search yet";
+        echo $_GET;
         return;
     }
 /*
