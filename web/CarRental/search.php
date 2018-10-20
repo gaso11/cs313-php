@@ -61,8 +61,7 @@
         <input type="text" id="search" name="search" 
                placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
-    </form><br>
-    <button><a href="carRentalBrowse.php">Back To Full List</a></button><br>
+    </form>
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
         <ul class="table">
