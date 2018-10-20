@@ -39,6 +39,8 @@ $cars = getCarsDB();
 <head>
     <title>Car Rental Service</title>
     <link rel="stylesheet" href="carRentalBrowse.css" type="text/css">
+    <script src="jquery.js"></script>
+    <script src="search.js"></script>
 </head>
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
 <header>
@@ -52,7 +54,7 @@ $cars = getCarsDB();
 <body>
     
     <!-- Searching -->
-    <form action="carRentalBrowse.php" method="post">
+    <form action="search.php" method="POST">
         <input type="text" name="search" placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>
