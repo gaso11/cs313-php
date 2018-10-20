@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
-        var data = document.getElementById("search");
-        console.log(data);
+        var data = document.getElementById("search").val();
         
         
         $.ajax({
