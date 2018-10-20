@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
-        var formData = document.getElementById("search");
+        var formData = document.getElementById(search);
         console.log(formData);
         
         
