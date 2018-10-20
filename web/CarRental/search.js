@@ -7,13 +7,14 @@ $(document).ready(function() {
         $.ajax({
             type : 'POST',
             url  : 'search.php',
-            data : "Ford",
+            data : {
+                search: data
+            },
+            success: function(result) {
+                console.log(result);
+            }
             
         })
-        
-        .done(function(data){
-            console.log(data);
-        });
         
         event.preventDefault();
         
