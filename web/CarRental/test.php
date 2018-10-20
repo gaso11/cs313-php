@@ -79,7 +79,7 @@ $cars = getCarsDB();
         <input type="submit" value=">>"/>
     </form>
     
-    <?php print("$output"); ?>
+    <?php echo $output ?>
     
     <br>
 </body>
