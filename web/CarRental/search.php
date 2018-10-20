@@ -19,10 +19,14 @@
     }
   }
     
-    if (empty($_GET["search"]))
+    if (empty($_POST["search"]))
     {
-        echo $_GET["search"];
+        echo "POST is empty: " . $_POST["search"];
         return;
+    }
+    else
+    {
+        $_POST["search"];
     }
 /*
     else
