@@ -1,7 +1,7 @@
 <?php
     if (empty($_POST['search']))
     {
-        echo "Nothing to search";
+        echo "Nothing to search yet";
         return;
     }
     else
