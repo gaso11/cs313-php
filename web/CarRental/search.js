@@ -7,12 +7,12 @@ $(document).ready(function() {
         $.ajax({
             type : 'POST',
             url  : 'search.php',
-            data : formData,
+            data : contents,
             
         })
         
         .done(function(data){
-            console.log(data);
+            console.log(contents);
         });
         
         event.preventDefault();
