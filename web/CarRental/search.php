@@ -1,4 +1,5 @@
 <?php
+    echo "Hi";
     if (empty($_POST['search']))
     {
         echo "Nothing to search yet";
