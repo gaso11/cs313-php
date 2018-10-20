@@ -19,12 +19,13 @@
     }
   }
     echo "Hi";
-    /*
-    if (empty($_POST["search"]))
+    
+    if (empty($_GET["search"]))
     {
         echo "Nothing to search yet";
         return;
     }
+/*
     else
     {
         $search = $_POST["search"]
