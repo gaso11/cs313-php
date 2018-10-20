@@ -5,7 +5,7 @@ $(document).ready(function() {
         
         
         $.ajax({
-            type : 'GET',
+            type : 'POST',
             url  : 'search.php',
             data : formData,
             
