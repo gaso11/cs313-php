@@ -23,7 +23,7 @@ function dbConnect(){
 
 function getCarsDB() {
     $db = dbConnect();
-    $output = '';
+    $output = 'Hello World';
     
     if (isset($_POST['search']))
     {
