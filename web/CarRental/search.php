@@ -1,5 +1,5 @@
 <?php
-
+/*
     function dbConnect(){
     try {
       $url = getenv('DATABASE_URL');
@@ -38,4 +38,6 @@
         $stmt->closeCursor();
         echo json_encode($data);
     }
+*/
+echo "Hello World";
 ?>
