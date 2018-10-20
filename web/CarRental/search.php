@@ -33,6 +33,6 @@
         $stmt->execute();
         $data = $stmt->fetchAll(PDO::FETCH_NAMED);
         $stmt->closeCursor();
-        echo $data;
+        echo json_encode($data);
     }
 ?>
