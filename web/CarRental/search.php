@@ -41,8 +41,6 @@
 <head>
     <title>Car Rental Service</title>
     <link rel="stylesheet" href="carRentalBrowse.css" type="text/css">
-    <script src="jquery.js"></script>
-    <script src="search.js"></script>
 </head>
     
 <!--Header from https://codepen.io/linux/pen/aEQKWP -->
@@ -57,11 +55,13 @@
 <body>
     
     <!-- Searching -->
+    <br>
     <form action="search.php" method="POST">
         <input type="text" id="search" name="search" 
                placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>
+    <br>
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
         <ul class="table">
