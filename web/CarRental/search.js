@@ -1,18 +1,18 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
-        var contents = $('#contents');
-        console.log(contents);
+        var data = document.getElementById("search");
+        console.log(data);
         
         
         $.ajax({
             type : 'POST',
             url  : 'search.php',
-            data : contents,
+            data : data,
             
         })
         
         .done(function(data){
-            console.log(contents);
+            console.log(data);
         });
         
         event.preventDefault();
