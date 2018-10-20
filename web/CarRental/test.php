@@ -54,7 +54,7 @@ $cars = getCarsDB();
 <body>
     
     <!-- Searching -->
-    <form action="search.php" method="POST">
+    <form action="search.php" method="post">
         <input type="text" name="search" placeholder="Search for cars..."/>
         <input type="submit" value=">>"/>
     </form>

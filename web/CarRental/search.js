@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
         var formData = { 'search' : $('input[search=search]').val() };
+        console.log(formData);
         
         
         $.ajax({
-            type : 'POST',
-            url : 'search.php',
+            type : 'post',
+            url  : 'search.php',
             data : formData,
             
         })

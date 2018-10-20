@@ -1,13 +1,13 @@
 <?php
     echo "Hi";
-    if (empty($_POST['search']))
+    if (empty($_POST["search"]))
     {
         echo "Nothing to search yet";
         return;
     }
     else
     {
-        $search = $_POST['search']
+        $search = $_POST["search"]
         $db = dbConnect();
         $sql = "SELECT * FROM Cars WHERE 
                 make LIKE '%$search%' OR model LIKE '%$search%'";
