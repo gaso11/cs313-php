@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
-        var data = document.getElementById("search").val();
+        var data = document.getElementById("search");
+        console.log(data);
         
         
         $.ajax({
@@ -8,12 +9,13 @@ $(document).ready(function() {
             url  : 'search.php',
             data : {
                 search: data
-            },
-            success: function(result) {
-                console.log(result);
             }
             
         })
+        
+        .done(function(data){
+            console.log(data);
+        });
         
         event.preventDefault();
         
