@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('form').submit(function(event) {
-        var formData = document.getElementById(search);
-        console.log(formData);
+        var contents = $('#contents');
+        console.log(contents);
         
         
         $.ajax({
