@@ -2,12 +2,13 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['verified']) || empty($_SESSION['verified'])) {
-   header("Location: carRentalBrowse.php");
+if($_SESSION['verified'])
+{
+    return;
 }
 else
 {
-    echo $_SESSION['verified'];
+    header("Location: carRentalBrowse.php");
 }
 
 function dbConnect(){
