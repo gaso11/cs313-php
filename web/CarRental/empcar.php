@@ -4,6 +4,7 @@ session_start();
 
 if($_SESSION['verified'])
 {
+    echo $_SESSION['verified'];
     return;
 }
 else
