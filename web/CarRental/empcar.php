@@ -1,5 +1,14 @@
 <!-- THIS WILL ONLY WORK WHEN PUSHED TO HEROKU -->
 <?php
+session_start();
+
+if(!isset($_SESSION['verified']) || empty($_SESSION['verified'])) {
+   header("Location: carRentalBrowse.php");
+}
+else
+{
+    echo $_SESSION['verified'];
+}
 
 function dbConnect(){
     try {
