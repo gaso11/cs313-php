@@ -4,8 +4,7 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    echo $_SESSION['verified'];
-    return;
+    $cars = getCarsDB();
 }
 else
 {
@@ -42,7 +41,7 @@ function getCarsDB() {
     return $data;
   }
   
-$cars = getCarsDB();
+
 
 ?>
 
