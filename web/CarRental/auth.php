@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function dbConnect(){
     try {
       $url = getenv('DATABASE_URL');
@@ -34,6 +35,8 @@ $emps = getDB();
 $username = $_POST["username"];
 $password = $_POST["password"];
 
+echo $emps . $username . $password;
+
 foreach($emps as $emp)
 {
     if ($username == $emp['firstname'])
@@ -44,7 +47,7 @@ foreach($emps as $emp)
         {
             $_SESSION['verified'] = true;
             /* Re-direct */
-            header(empcar.php);
+            header("Location: empcar.php");
         }
         else
         {
