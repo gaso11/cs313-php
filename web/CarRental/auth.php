@@ -35,8 +35,6 @@ $emps = getDB();
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-echo $emps . $username . $password;
-
 foreach($emps as $emp)
 {
     if ($username == $emp['firstname'])
