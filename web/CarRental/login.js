@@ -1,3 +1,4 @@
+/* See login.html for comment */
 var current = null;
 document.querySelector('#email').addEventListener('focus', function(e) {
   if (current) current.pause();
@@ -47,3 +48,4 @@ document.querySelector('#submit').addEventListener('focus', function(e) {
     }
   });
 });
+
