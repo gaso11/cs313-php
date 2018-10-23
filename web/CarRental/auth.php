@@ -36,7 +36,7 @@ $password = $_POST["password"];
 
 foreach($emps as $emp)
 {
-    if ($username == $emp['username'])
+    if ($username == $emp['firstname'])
     {
         $hash = $emp['password'];
         
@@ -50,6 +50,10 @@ foreach($emps as $emp)
         {
             echo "FAILED TO AUTHENTICATE";
         }
+    }
+    else
+    {
+        echo "NO USER FOUND";
     }
 }
 
