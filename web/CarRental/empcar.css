@@ -23,6 +23,24 @@ header .header{
 
 .addform {
     text-align: center;
+    width: 500px;
+    clear: both;
+}
+
+.addform input {
+    width: 100%;
+    clear: both;
+}
+
+.addform .button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
 }
 
 button {

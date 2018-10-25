@@ -71,7 +71,7 @@ function getCarsDB() {
         <input type="text", name="rentalstatus", id="rentalstatus"><br>
         <label for="repairstatus">Repair Status:</label>
         <input type="text", name="repairstatus", id="repairstatus"><br>
-        <input type="submit" value="Add">
+        <input class="button" type="submit" value="Add">
     </form>
     </div>
 </body>
