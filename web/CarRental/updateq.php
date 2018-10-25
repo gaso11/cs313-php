@@ -67,7 +67,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     $db = dbConnect();
     
     /* Check for NULL values */
-    if ($make == )
+    if ($make == "")
     {
         $make = fixNull('make', $db);
         echo "called";
