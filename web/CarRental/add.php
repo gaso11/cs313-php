@@ -56,21 +56,22 @@ function getCarsDB() {
 </header>
 <body>
     
-    <br><h3>Enter the details for the car</h3>
+    <br><h3 class="addform">Enter the details for the car</h3>
     <div class="addform">
     <form action="addq.php" method="POST">
-        <label for="make">Make</label>
-        <input type="text", name="make", id="make">
-        <label for="model">Model</label>
+        <label for="make">Make:</label>
+        <input type="text", name="make", id="make"><br>
+        <label for="model">Model:</label>
         <input type="text", name="model", id="model"><br>
-        <label for="mileage">Mileage</label>
-        <input type="number", name="mileage", id="mileage">
-        <label for="cost">Cost</label>
+        <label for="mileage">Mileage:</label>
+        <input type="number", name="mileage", id="mileage"><br>
+        <label for="cost">Cost:</label>
         <input type="number", name="cost", id="cost"><br>
-        <label for="rentalstatus">Rental Status</label>
-        <input type="text", name="rentalstatus", id="rentalstatus">
-        <label for="repairstatus">Repair Status</label>
+        <label for="rentalstatus">Rental Status:</label>
+        <input type="text", name="rentalstatus", id="rentalstatus"><br>
+        <label for="repairstatus">Repair Status:</label>
         <input type="text", name="repairstatus", id="repairstatus"><br>
+        <input type="submit" value="Add">
     </form>
     </div>
 </body>
