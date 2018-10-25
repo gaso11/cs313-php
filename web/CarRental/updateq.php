@@ -93,7 +93,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     } 
     else if ($renterfirst == "")
     {
-        $renterfirst = fixNull('renterfirst')
+        $renterfirst = fixNull('renterfirst');
     } 
     else if ($renterlast = "")
     {
