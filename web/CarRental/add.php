@@ -57,6 +57,7 @@ function getCarsDB() {
 <body>
     
     <br><h3 class="addform">Enter the details for the car</h3>
+    <div class="center">
     <div class="addform">
     <form action="addq.php" method="POST">
         <label for="make">Make:</label>
@@ -73,6 +74,7 @@ function getCarsDB() {
         <input type="text", name="repairstatus", id="repairstatus"><br>
         <input class="button" type="submit" value="Add">
     </form>
+    </div>
     </div>
 </body>
 </html>
