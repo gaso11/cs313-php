@@ -55,25 +55,24 @@ function getCarsDB() {
     </div>
 </header>
 <body>
-    <div class="centerthis">
+    
     <br><h3 class="addform">Enter the details for the car</h3>
-        <div class="addform">
-        <form action="addq.php" method="POST">
-            <label for="make">Make:</label>
-            <input type="text", name="make", id="make"><br>
-            <label for="model">Model:</label>
-            <input type="text", name="model", id="model"><br>
-            <label for="mileage">Mileage:</label>
-            <input type="number", name="mileage", id="mileage"><br>
-            <label for="cost">Cost:</label>
-            <input type="number", name="cost", id="cost"><br>
-            <label for="rentalstatus">Rental Status:</label>
-            <input type="text", name="rentalstatus", id="rentalstatus"><br>
-            <label for="repairstatus">Repair Status:</label>
-            <input type="text", name="repairstatus", id="repairstatus"><br>
-            <input class="button" type="submit" value="Add">
-        </form>
-        </div>
+    <div class="addform">
+    <form action="addq.php" method="POST">
+        <label for="make">Make:</label>
+        <input type="text", name="make", id="make"><br>
+        <label for="model">Model:</label>
+        <input type="text", name="model", id="model"><br>
+        <label for="mileage">Mileage:</label>
+        <input type="number", name="mileage", id="mileage"><br>
+        <label for="cost">Cost:</label>
+        <input type="number", name="cost", id="cost"><br>
+        <label for="rentalstatus">Rental Status:</label>
+        <input type="text", name="rentalstatus", id="rentalstatus"><br>
+        <label for="repairstatus">Repair Status:</label>
+        <input type="text", name="repairstatus", id="repairstatus"><br><br>
+        <input class="button" type="submit" value="Add">
+    </form>
     </div>
 </body>
 </html>
