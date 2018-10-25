@@ -5,8 +5,8 @@ if($_SESSION['verified'])
 {
     $make = $_POST["make"];
     $model = $_POST["model"];
-    $mileage = $_POST["mileage"];
-    $cost = $_POST["cost"];
+    $mileage = (int)$_POST["mileage"];
+    $cost = (int)$_POST["cost"];
     $rentalstatus = $_POST["rentalstatus"];
     $repairstatus = $_POST["repairstatus"];
     $car = addCar();
