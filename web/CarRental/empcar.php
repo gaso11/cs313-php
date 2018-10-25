@@ -57,6 +57,8 @@ function getCarsDB() {
         <a href="add.php"><button>Add a Car</button></a>
         <a href="remove.php"><button>Remove a Car</button></a>
         <a href="update.php"><button>Edit a Car</button></a><br>
+        <a href="addemp.php"><button>Add Employee</button></a>
+        <a href="removeemp.php"><button>Remove Employee</button></a><br>
     </div>
 </header>
 <body>

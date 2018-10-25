@@ -39,7 +39,11 @@ function getCarsDB() {
     $stmt->closeCursor();
     return $data;
   }
-  
 
-
+echo "<select name=\"carList\" id=\"carList\">";
+foreach($cars as $car) 
+{
+    echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
+        . $car['make'] . " " . $car['model'] . "</option>";
+}
 ?>
