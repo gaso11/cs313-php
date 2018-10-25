@@ -94,7 +94,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     else if ($renterfirst == "")
     {
         $renterfirst = fixNull('renterfirst', $db);
-        if !(renterfirst == "")
+        if (!renterfirst == "")
             $firstString = "renterfirstname = :renterfirstname";
         else
             $firstString = " ";
@@ -102,7 +102,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     else if ($renterlast = "")
     {
         $renterlast = fixNull('renterlast', $db);
-        if !(renterlast == "")
+        if (!renterlast == "")
             $lastString = "renterlastname = :renterlastname";
         else
             $lastString = " ";
