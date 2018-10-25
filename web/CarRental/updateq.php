@@ -3,13 +3,13 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    $carID = $_POST['carList'];
+    $carID = $_POST["carList"];
     $mileage = filter_var($_POST["mileage"]);
     $cost = filter_var($_POST["cost"]);
     $rentalstatus = filter_var($_POST["rentalstatus"]);
     $repairstatus = filter_var($_POST["repairstatus"]);
-    $renterfirst = $_POST['renterfirstname'];
-    $renterlast = $_POST['renterlastname'];
+    $renterfirst = $_POST["renterfirstname"];
+    $renterlast = $_POST["renterlastname"];
     
     updateCars($carID, $mileage, $cost, $rentalstatus,
                $repairstatus, $renterfirst, $renterlast);
