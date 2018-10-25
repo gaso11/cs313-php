@@ -21,19 +21,15 @@ header .header{
     background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
 }
 
-.center {
-    text-align: center;
-}
-
 .addform {
     text-align: center;
     width: 500px;
-    clear: both;
+    /*clear: both;*/
 }
 
 .addform input {
-    width: 100%;
-    clear: both;
+    width: 50%;
+    /*clear: both;*/
 }
 
 .addform .button {
