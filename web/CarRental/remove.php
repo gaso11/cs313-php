@@ -57,7 +57,7 @@ function getCarsDB() {
 <?php
     
 /* Make list of cars to remove */
-echo "<form>";
+echo "<form action=\"removeq\" method=\"POST\">";
 echo "<select name=\"carList\" id=\"carList\">";
 foreach($cars as $car) 
 {
