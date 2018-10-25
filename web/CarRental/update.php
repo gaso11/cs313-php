@@ -67,9 +67,10 @@ foreach($cars as $car)
         . $car['make'] . " " . $car['model'] . "</option><br><br>";
 }
 
+echo "<label for=\"mileage\">Mileage:</label>";
+    
 ?>
-<br>
-<label>ugh</label>
+
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
