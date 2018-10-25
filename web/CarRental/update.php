@@ -55,7 +55,7 @@ function getCarsDB() {
     </div>
 </header>
 <body>
-    <h3>Only fill out fields you want to change</h3>
+    <h3 style="text-align: center;">Only fill out fields you want to change</h3>
 <?php
     
 /* Make list of cars to remove */
@@ -64,7 +64,7 @@ echo "<select name=\"carList\" id=\"carList\">";
 foreach($cars as $car) 
 {
     echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
-        . $car['make'] . " " . $car['model'] . "</option>";
+        . $car['make'] . " " . $car['model'] . "</option><br><br>";
 }
     
 ?>
