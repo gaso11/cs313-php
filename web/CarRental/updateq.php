@@ -4,8 +4,6 @@ session_start();
 if($_SESSION['verified'])
 {
     $carID = $_POST['carList'];
-    $make = filter_var($_POST["make"]);
-    $model = filter_var($_POST["model"]);
     $mileage = filter_var($_POST["mileage"]);
     $cost = filter_var($_POST["cost"]);
     $rentalstatus = filter_var($_POST["rentalstatus"]);
@@ -13,7 +11,7 @@ if($_SESSION['verified'])
     $renterfirst = $_POST['renterfirstname'];
     $renterlast = $_POST['renterlastname'];
     
-    updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
+    updateCars($carID, $mileage, $cost, $rentalstatus,
                $repairstatus, $renterfirst, $renterlast);
 }
 else
@@ -62,20 +60,37 @@ function fixNull($col, $db)
     return $data[$col];
 }
 
-function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
+function getMake($db)
+{
+    $lookup = "SELECT make FROM Cars WHERE carID = :carID";
+    $stmt = $db->prepare($lookup);
+    $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NAMED);
+    $stmt->closeCursor();
+    return $data[$col];
+}
+
+function getModel($db)
+{
+    $lookup = "SELECT model FROM Cars WHERE carID = :carID";
+    $stmt = $db->prepare($lookup);
+    $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_NAMED);
+    $stmt->closeCursor();
+    return $data[$col];
+}
+
+function updateCars($carID, $mileage, $cost, $rentalstatus,
                     $repairstatus, $renterfirst, $renterlast) {
     $db = dbConnect();
     
+    $make = getMake($db);
+    $model = getModel($db);
+    
     /* Check for NULL values */
-    if ($make == "")
-    {
-        $make = fixNull('make', $db);
-    } 
-    else if ($model == "") 
-    {
-        $model = fixNull('model', $db);
-    }
-    else if ($mileage == "")
+    if ($mileage == "")
     {
         $mileage = fixNull('mileage', $db);
     }
