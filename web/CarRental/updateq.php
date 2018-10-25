@@ -3,7 +3,7 @@ session_start();
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
-    echo $cars;
+    echo $cars[6];
     getVars($cars);
 }
 else
