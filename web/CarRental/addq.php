@@ -3,13 +3,13 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    $make = $_POST["make"];
-    $model = $_POST["model"];
-    $mileage = (int)$_POST["mileage"];
-    $cost = (int)$_POST["cost"];
-    $rentalstatus = $_POST["rentalstatus"];
-    $repairstatus = $_POST["repairstatus"];
-    $car = addCar();
+    $make = filter_var($_POST["make"], FILTER_SANITIZER_STRING);
+    $model = filter_var($_POST["model"], FILTER_SANITIZER_STRING);
+    $mileage = filter_var($_POST["mileage"], FILTER_SANITIZE_NUMBER_INT);
+    $cost = filter_var($_POST["cost"], FILTER_SANITIZE_NUMBER_INT);
+    $rentalstatus = filter_var($_POST["rentalstatus"], FILTER_SANITIZER_STRING);
+    $repairstatus = filter_var($_POST["repairstatus"], FILTER_SANITIZER_STRING);
+    $added = addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus);
 }
 else
 {
@@ -36,12 +36,17 @@ function dbConnect(){
     }
   }
 
-function addCar() {
+function addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus) {
     $db = dbConnect();
-    $sql = "INSERT INTO Cars 
-            (Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
-            ('%$cost%', '%$mileage%', '%$make%', '%$model%', '%$rentalstatus%', '%$repairstatus%')";
+    $sql = "INSERT INTO Cars (Cost, Mileage, Make, Model, RentalStatus, RepairStatus)
+            VALUES (:cost, :mileage, :make, :model, :rentalstatus, :repairstatus)";
     $stmt = $db->prepare($sql);
+    $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
+    $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
+    $stmt->bindValue(":make", $make, PDO::PARAM_STR);
+    $stmt->bindValue(":model", $model, PDO::PARAM_STR);
+    $stmt->bindValue(":rentalstatus", $rentalstatus, PDO::PARAM_STR);
+    $stmt->bindValue(":repairstatus", $repairstatus, PDO::PARAM_STR);
     if ($stmt->execute())
     {
         header("Location: empcar.php");
