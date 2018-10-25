@@ -3,6 +3,7 @@
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
+    echo "Getting vars";
     getVars();
 }
 else
