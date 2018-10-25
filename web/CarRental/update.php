@@ -42,3 +42,63 @@ function getCarsDB() {
   
 
 ?>
+
+<html>
+<head>
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="empcar.css" type="text/css">
+</head>
+<!--Header from https://codepen.io/linux/pen/aEQKWP -->
+<header>
+    <div class="header">
+        <h1>Update a Car</h1><br>
+    </div>
+</header>
+<body>
+    
+<?php
+    
+/* Make list of cars to remove */
+echo "<form class=\"addform\" action=\"updateq.php\" method=\"POST\">";
+echo "<select name=\"carList\" id=\"carList\">";
+foreach($cars as $car) 
+{
+    echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
+        . $car['make'] . " " . $car['model'] . "</option>";
+}
+    
+?>
+    
+<label for="make">Make:</label>
+<input type="text", name="make", id="make"><br>
+<label for="model">Model:</label>
+<input type="text", name="model", id="model"><br>
+<label for="mileage">Mileage:</label>
+<input type="number", name="mileage", id="mileage"><br>
+<label for="cost">Cost:</label>
+<input type="number", name="cost", id="cost"><br>
+<label for="rentalstatus">Rental Status:</label>
+<select name="rentalstatus" id="rentalstatus">
+    <option value="Open">Open</option>
+    <option value="Closed">Closed</option>
+</select><br>
+<label for="repairstatus">Repair Status:</label>
+<select name="repairstatus" id="repairstatus">
+    <option value="Okay">Okay</option>
+    <option value="In Shop">In Shop</option>
+    <option value="Needs Repair">Needs Repair</option>
+</select><br><br>
+<label for="renterfirstname">Renter First Name:</label>
+<input type="text" name="renterfirstname" id="renterfirstname">
+<label for="renterfirstname">Renter Last Name:</label>
+<input type="text" name="renterlastname" id="renterlastname">
+    
+<?php
+    
+echo "<input class=\"button\" type=\"submit\" value=\"Update\">";
+echo "</form>";
+
+?>
+
+</body>
+</html>
