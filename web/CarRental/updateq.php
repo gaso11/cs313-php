@@ -89,6 +89,9 @@ function updateCars($carID, $mileage, $cost, $rentalstatus,
     $make = getMake($db);
     $model = getModel($db);
     
+    echo $make;
+    echo $model;
+    
     /* Check for NULL values */
     if ($mileage == "")
     {
