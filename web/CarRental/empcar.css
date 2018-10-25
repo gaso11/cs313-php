@@ -28,6 +28,7 @@ header .header{
 }
 
 .addform input {
+    text-align: center;
     width: 100%;
     clear: both;
 }
