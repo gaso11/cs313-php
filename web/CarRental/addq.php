@@ -3,7 +3,7 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    $make = filter_var($_POST["make"], FILTER_SANITIZER_STRING);
+    $make = filter_var($_POST["make"]);
     $model = filter_var($_POST["model"], FILTER_SANITIZER_STRING);
     $mileage = filter_var($_POST["mileage"], FILTER_SANITIZE_NUMBER_INT);
     $cost = filter_var($_POST["cost"], FILTER_SANITIZE_NUMBER_INT);
