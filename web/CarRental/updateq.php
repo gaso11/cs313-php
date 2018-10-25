@@ -3,7 +3,7 @@ session_start();
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
-    getVars();
+    getVars($cars);
 }
 else
 {
@@ -42,12 +42,12 @@ function getCarsDB() {
 
 function getVars()
 {
-    /*
+    
     $carID = $_POST['carList'];
     echo "CarID: $carID";
     $make = $cars[$carID];
     echo "Make: $make";
-    */
+    echo "            ";
     echo var_dump($cars);
 }
 
