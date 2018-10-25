@@ -3,8 +3,8 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    echo $_POST['carList'];
-    $cars = getCarsDB();
+    $carID = $_POST['carid'];
+    deleteCar($carID);
 }
 else
 {
@@ -31,14 +31,19 @@ function dbConnect(){
     }
   }
 
-function getCarsDB() {
+function deleteCar($carID) {
     $db = dbConnect();
-    $sql = "SELECT * FROM Cars";
+    $sql = "DELETE FROM Cars WHERE carid = :carID";
     $stmt = $db->prepare($sql);
-    $stmt->execute();
-    $data = $stmt->fetchAll(PDO::FETCH_NAMED);
-    $stmt->closeCursor();
-    return $data;
+    $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
+    if ($stmt->execute())
+    {
+        header("Location: empcar.php");
+    }
+    else
+    {
+        echo "Insert Failed";
+    }
   }
   
 
