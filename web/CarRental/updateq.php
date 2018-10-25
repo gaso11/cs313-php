@@ -8,7 +8,8 @@ if($_SESSION['verified'])
 }
 else
 {
-    header("Location: carRentalBrowse.php");
+    echo "Failed";
+    //header("Location: carRentalBrowse.php");
 }
 
 function dbConnect(){
