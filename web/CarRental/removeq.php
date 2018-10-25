@@ -4,6 +4,7 @@ session_start();
 if($_SESSION['verified'])
 {
     $carID = $_POST['carid'];
+    echo $carID . " ";
     deleteCar($carID);
 }
 else
@@ -35,8 +36,9 @@ function deleteCar($carID) {
     $db = dbConnect();
     $sql = "DELETE FROM Cars WHERE carid = :carID";
     $stmt = $db->prepare($sql);
+    echo $carID . " ";
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
-    echo $carID;
+    echo $carID . " ";
     /*
     if ($stmt->execute())
     {
