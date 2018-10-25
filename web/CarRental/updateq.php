@@ -121,6 +121,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     $stmt->bindValue(":repairstatus", $repairstatus, PDO::PARAM_STR);
     $stmt->bindValue(":renterfirst", $renterfirst, PDO::PARAM_STR);
     $stmt->bindValue(":renterlast", $renterlast, PDO::PARAM_STR);
+    $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
     if ($stmt->execute())
     {
         header("Location: empcar.php");
