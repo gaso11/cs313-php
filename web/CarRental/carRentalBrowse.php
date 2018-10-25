@@ -46,7 +46,7 @@ $cars = getCarsDB();
         <h1>Car Rental Service</h1><br>
         <h3>At new all low prices!</h3>
         <br><br>
-        <a href="login.html"><button>Login</button></a>
+        <a href="login.html"><button>Login</button></a><br>
     </div>
 </header> 
 <body>

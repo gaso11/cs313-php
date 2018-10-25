@@ -54,6 +54,9 @@ function getCarsDB() {
 <header>
     <div class="header">
         <h1>Car Rental Service Employee Page</h1><br>
+        <a href="add.php"><button>Add a Car</button></a>
+        <a href="remove.php"><button>Remove a Car</button></a>
+        <a href="update.php"><button>Edit a Car</button></a><br>
     </div>
 </header>
 <body>
