@@ -3,8 +3,8 @@ session_start();
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
-    echo $cars[6];
-    getVars($cars);
+    getVars();
+    
 }
 else
 {
@@ -43,7 +43,6 @@ function getCarsDB() {
 
 function getVars()
 {
-    
     $carID = $_POST['carList'];
     echo "CarID: $carID";
     $make = $cars[$carID];
