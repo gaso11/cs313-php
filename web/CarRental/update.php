@@ -55,7 +55,7 @@ function getCarsDB() {
     </div>
 </header>
 <body>
-    
+    <h3>Only fill out fields you want to change</h3>
 <?php
     
 /* Make list of cars to remove */
@@ -69,19 +69,19 @@ foreach($cars as $car)
     
 ?>
     
-<label for="make">Make:</label>
-<input type="text", name="make", id="make"><br>
+<br><br><label for="make">Make:</label>
+<input type="text", name="make", id="make"><br><br>
 <label for="model">Model:</label>
-<input type="text", name="model", id="model"><br>
+<input type="text", name="model", id="model"><br><br>
 <label for="mileage">Mileage:</label>
-<input type="number", name="mileage", id="mileage"><br>
+<input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
-<input type="number", name="cost", id="cost"><br>
+<input type="number", name="cost", id="cost"><br><br>
 <label for="rentalstatus">Rental Status:</label>
 <select name="rentalstatus" id="rentalstatus">
     <option value="Open">Open</option>
     <option value="Closed">Closed</option>
-</select><br>
+</select><br><br>
 <label for="repairstatus">Repair Status:</label>
 <select name="repairstatus" id="repairstatus">
     <option value="Okay">Okay</option>
@@ -89,9 +89,9 @@ foreach($cars as $car)
     <option value="Needs Repair">Needs Repair</option>
 </select><br><br>
 <label for="renterfirstname">Renter First Name:</label>
-<input type="text" name="renterfirstname" id="renterfirstname">
+<input type="text" name="renterfirstname" id="renterfirstname"><br><br>
 <label for="renterfirstname">Renter Last Name:</label>
-<input type="text" name="renterlastname" id="renterlastname">
+<input type="text" name="renterlastname" id="renterlastname"><br><br>
     
 <?php
     
