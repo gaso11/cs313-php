@@ -36,6 +36,7 @@ function deleteCar($carID) {
     $sql = "DELETE FROM Cars WHERE carid = :carID";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
+    echo $carID;
     if ($stmt->execute())
     {
         header("Location: empcar.php");
