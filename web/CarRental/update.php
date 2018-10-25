@@ -60,6 +60,7 @@ function getCarsDB() {
     
 /* Make list of cars to remove */
 echo "<form class=\"addform\" action=\"updateq.php\" method=\"POST\">";
+echo "<div>"
 echo "<select name=\"carList\" id=\"carList\">";
 foreach($cars as $car) 
 {
@@ -68,7 +69,7 @@ foreach($cars as $car)
 }
     
 ?>
-
+</div><br>
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
