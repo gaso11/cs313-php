@@ -51,7 +51,7 @@ function getCarsDB() {
 
 function fixNull($col, $db)
 {
-    $lookup = "SELECT * FROM Cars WHERE carID = :carID";
+    $lookup = "SELECT * FROM Cars WHERE carID = 6";
     $stmt = $db->prepare($lookup);
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
     $stmt->execute();
@@ -62,20 +62,20 @@ function fixNull($col, $db)
 
 function getMake($db)
 {
-    $lookup = "SELECT * FROM Cars WHERE carID = :carID";
+    $lookup = "SELECT * FROM Cars WHERE carID = 6";
     $stmt = $db->prepare($lookup);
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
-    echo "CarID: $carID";
+    //echo "CarID: $carID";
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_NAMED);
     $stmt->closeCursor();
-    echo var_dump($data);
+    //echo var_dump($data);
     return $data['make'];
 }
 
 function getModel($db)
 {
-    $lookup = "SELECT * FROM Cars WHERE carID = :carID";
+    $lookup = "SELECT * FROM Cars WHERE carID = 6";
     $stmt = $db->prepare($lookup);
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
     $stmt->execute();
@@ -91,8 +91,8 @@ function updateCars($carID, $mileage, $cost, $rentalstatus,
     $make = getMake($db);
     $model = getModel($db);
     
-    echo "Make: " . $make;
-    echo $model;
+    //echo "Make: " . $make;
+    //echo $model;
     
     /* Check for NULL values */
     if ($mileage == "")
