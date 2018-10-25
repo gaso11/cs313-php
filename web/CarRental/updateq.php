@@ -42,10 +42,13 @@ function getCarsDB() {
 
 function getVars()
 {
+    /*
     $carID = $_POST['carList'];
     echo "CarID: $carID";
     $make = $cars[$carID];
     echo "Make: $make";
+    */
+    echo var_dump($cars);
 }
 
 ?>
