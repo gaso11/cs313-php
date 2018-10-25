@@ -65,9 +65,11 @@ function getMake($db)
     $lookup = "SELECT * FROM Cars WHERE carID = :carID";
     $stmt = $db->prepare($lookup);
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
+    echo "CarID: $carID";
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_NAMED);
     $stmt->closeCursor();
+    echo var_dump($data);
     return $data['make'];
 }
 
