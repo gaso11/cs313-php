@@ -3,14 +3,10 @@
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
-    echo "Getting vars";
-    getVars();
 }
 else
 {
-    echo "Failed";
-    echo "Session: " . $_SESSION['verified'];
-    //header("Location: carRentalBrowse.php");
+    header("Location: carRentalBrowse.php");
 }
 
 function dbConnect(){
