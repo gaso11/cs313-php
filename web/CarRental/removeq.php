@@ -3,7 +3,7 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    var_dump($_POST);
+    echo $_POST['carList'];
     $cars = getCarsDB();
 }
 else
