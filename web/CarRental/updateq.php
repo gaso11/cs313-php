@@ -94,18 +94,10 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     else if ($renterfirst == "")
     {
         $renterfirst = fixNull('renterfirst', $db);
-        if (!renterfirst == "")
-            $firstString = "renterfirstname = :renterfirst";
-        else
-            $firstString = " ";
     }   
     else if ($renterlast = "")
     {
         $renterlast = fixNull('renterlast', $db);
-        if (!renterlast == "")
-            $lastString = "renterlastname = :renterlast";
-        else
-            $lastString = " ";
     }
     
     
@@ -115,9 +107,11 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
             make = :make,
             model = :model,
             rentalstatus = :rentalstatus,
-            repairstatus = :repairstatus,"
-            . $firstString . "," . $lastString . "
+            repairstatus = :repairstatus,
+            renterfirstname = :renterfirst,
+            renterlastname = :renterlast,
             WHERE carid = :carID";
+    echo $sql;
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
     $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
