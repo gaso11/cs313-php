@@ -61,7 +61,7 @@ function getCarsDB() {
 /* Make list of cars to remove */
 echo "<form class=\"addform\" action=\"updateq.php\" method=\"POST\">";
 echo "<label for=\"carList\">Select Car:</label>";
-echo "<select name=\"carList\" id=\"carList\">";
+echo "<select name=\"carList\" id=\"carList\">\n";
 foreach($cars as $car) 
 {
     echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
