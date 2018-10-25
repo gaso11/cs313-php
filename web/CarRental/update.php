@@ -68,11 +68,7 @@ foreach($cars as $car)
 }
     
 ?>
-    
-<br><br><label for="make">Make:</label>
-<input type="text", name="make", id="make"><br><br>
-<label for="model">Model:</label>
-<input type="text", name="model", id="model"><br><br>
+
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
