@@ -111,7 +111,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
             renterfirstname = :renterfirst,
             renterlastname = :renterlast,
             WHERE carid = :carID";
-    echo $sql;
+    
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
     $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
