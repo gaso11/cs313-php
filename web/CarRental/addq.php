@@ -3,12 +3,19 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    $cars = getCarsDB();
+    $car = addCar();
 }
 else
 {
     header("Location: carRentalBrowse.php");
 }
+
+$make = $_POST["make"];
+$model = $_POST["model"];
+$mileage = $_POST["mileage"];
+$cost = $_POST["cost"];
+$rentalstatus = $_POST["rentalstatus"];
+$repairstatus = $_POST["repairstatus"];
 
 function dbConnect(){
     try {
@@ -30,9 +37,11 @@ function dbConnect(){
     }
   }
 
-function getCarsDB() {
+function addCar() {
     $db = dbConnect();
-    $sql = "SELECT * FROM Cars";
+    $sql = "INSERT INTO Cars 
+            (Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
+            ('%$cost%', '%$mileage%', '%$make%', '%$model%', '%$rentalstatus%', '%$repairstatus%')";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_NAMED);
@@ -41,8 +50,6 @@ function getCarsDB() {
   }
   
 
-?>
 
-<html>
-    <p>You made it</p>
-</html>
+
+?>
