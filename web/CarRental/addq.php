@@ -9,7 +9,6 @@ if($_SESSION['verified'])
     $cost = $_POST["cost"];
     $rentalstatus = $_POST["rentalstatus"];
     $repairstatus = $_POST["repairstatus"];
-    echo $cost;
     $car = addCar();
 }
 else
@@ -43,10 +42,15 @@ function addCar() {
             (Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
             ('%$cost%', '%$mileage%', '%$make%', '%$model%', '%$rentalstatus%', '%$repairstatus%')";
     $stmt = $db->prepare($sql);
-    $stmt->execute();
-    $data = $stmt->fetchAll(PDO::FETCH_NAMED);
-    $stmt->closeCursor();
-    return $data;
+    if ($stmt->execute())
+    {
+        header("Location: empcar.php");
+    }
+    else
+    {
+        echo "Insert Failed";
+    }
+    
   }
   
 
