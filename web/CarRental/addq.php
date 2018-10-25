@@ -3,19 +3,19 @@ session_start();
 
 if($_SESSION['verified'])
 {
+    $make = $_POST["make"];
+    $model = $_POST["model"];
+    $mileage = $_POST["mileage"];
+    $cost = $_POST["cost"];
+    $rentalstatus = $_POST["rentalstatus"];
+    $repairstatus = $_POST["repairstatus"];
+    echo $cost;
     $car = addCar();
 }
 else
 {
     header("Location: carRentalBrowse.php");
 }
-
-$make = $_POST["make"];
-$model = $_POST["model"];
-$mileage = $_POST["mileage"];
-$cost = $_POST["cost"];
-$rentalstatus = $_POST["rentalstatus"];
-$repairstatus = $_POST["repairstatus"];
 
 function dbConnect(){
     try {
