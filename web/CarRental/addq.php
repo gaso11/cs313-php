@@ -9,7 +9,13 @@ if($_SESSION['verified'])
     $cost = filter_var($_POST["cost"], FILTER_SANITIZE_NUMBER_INT);
     $rentalstatus = filter_var($_POST["rentalstatus"], FILTER_SANITIZER_STRING);
     $repairstatus = filter_var($_POST["repairstatus"], FILTER_SANITIZER_STRING);
-    $added = addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus);
+    echo "Make is: " . $make;
+    echo "Model is: " . $model;
+    echo "Mileage is: " . $mileage;
+    echo "Cost is: " . $cost;
+    echo "Rental Status is: " . $rentatlstatus;
+    echo "Repair Status is: " . $repairstatus;
+    //$added = addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus);
 }
 else
 {
