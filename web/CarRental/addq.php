@@ -4,11 +4,11 @@ session_start();
 if($_SESSION['verified'])
 {
     $make = filter_var($_POST["make"]);
-    $model = filter_var($_POST["model"], FILTER_SANITIZER_STRING);
-    $mileage = filter_var($_POST["mileage"], FILTER_SANITIZE_NUMBER_INT);
-    $cost = filter_var($_POST["cost"], FILTER_SANITIZE_NUMBER_INT);
-    $rentalstatus = filter_var($_POST["rentalstatus"], FILTER_SANITIZER_STRING);
-    $repairstatus = filter_var($_POST["repairstatus"], FILTER_SANITIZER_STRING);
+    $model = filter_var($_POST["model"]);
+    $mileage = filter_var($_POST["mileage"]);
+    $cost = filter_var($_POST["cost"]);
+    $rentalstatus = filter_var($_POST["rentalstatus"]);
+    $repairstatus = filter_var($_POST["repairstatus"]);
     echo "Make is: " . $make . "\n";
     echo "Model is: " . $model . "\n";
     echo "Mileage is: " . $mileage . "\n";
@@ -16,7 +16,7 @@ if($_SESSION['verified'])
     echo "Rental Status is: " . $rentatlstatus . "\n";
     echo "Repair Status is: " . $repairstatus . "\n";
     echo var_dump($_POST);
-    //$added = addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus);
+    addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus);
 }
 else
 {
