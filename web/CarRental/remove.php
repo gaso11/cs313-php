@@ -39,11 +39,33 @@ function getCarsDB() {
     $stmt->closeCursor();
     return $data;
   }
+?>
 
+<html>
+<head>
+    <title>Car Rental Service</title>
+    <link rel="stylesheet" href="empcar.css" type="text/css">
+</head>
+<!--Header from https://codepen.io/linux/pen/aEQKWP -->
+<header>
+    <div class="header">
+        <h1>Remove a Car</h1><br>
+    </div>
+</header>
+<body>
+
+<?php
+    
+/* Make list of cars to remove */
+echo "<form>";
 echo "<select name=\"carList\" id=\"carList\">";
 foreach($cars as $car) 
 {
     echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
         . $car['make'] . " " . $car['model'] . "</option>";
 }
+echo "<input class=\"button\" type=\"submit\" value=\"Delete\">";
+echo "</form>";
+
 ?>
+</body>
