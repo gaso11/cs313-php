@@ -24,12 +24,12 @@ header .header{
 .addform {
     text-align: center;
     width: 500px;
-    /*clear: both;*/
+    clear: both;
 }
 
 .addform input {
     width: 50%;
-    /*clear: both;*/
+    clear: both;
 }
 
 .addform .button {
