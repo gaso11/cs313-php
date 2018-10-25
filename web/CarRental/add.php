@@ -74,9 +74,9 @@ function getCarsDB() {
         </select><br>
         <label for="repairstatus">Repair Status:</label>
         <select name="repairstatus" id="repairstatus">
+            <option value="okay">Okay</option>
             <option value="inshop">In Shop</option>
             <option value="needsrepair">Needs Repair</option>
-            <option value="okay">Okay</option>
         </select><br><br>
         <input class="button" type="submit" value="Add">
     </form>

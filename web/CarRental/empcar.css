@@ -33,6 +33,11 @@ header .header{
     clear: both;
 }
 
+.addform select {
+    width: 100%;
+    clear: both;
+}
+
 .addform .button {
     border: none;
     outline: none;
