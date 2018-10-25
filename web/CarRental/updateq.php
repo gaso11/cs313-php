@@ -109,7 +109,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
             rentalstatus = :rentalstatus,
             repairstatus = :repairstatus,
             renterfirstname = :renterfirst,
-            renterlastname = :renterlast,
+            renterlastname = :renterlast
             WHERE carid = :carID";
     
     $stmt = $db->prepare($sql);
