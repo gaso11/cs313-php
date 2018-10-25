@@ -4,7 +4,7 @@ session_start();
 if($_SESSION['verified'])
 {
     $carID = $_POST['carList'];
-    echo("<script>console.log('PHP: ".carID."');</script>");
+    echo var_dump($carID);
     deleteCar($carID);
 }
 else
@@ -36,10 +36,7 @@ function deleteCar($carID) {
     $db = dbConnect();
     $sql = "DELETE FROM Cars WHERE carid = :carID";
     $stmt = $db->prepare($sql);
-    echo("<script>console.log('PHP: ".carID."');</script>");
     $stmt->bindValue(":carID", $carID, PDO::PARAM_INT);
-    echo("<script>console.log('PHP: ".carID."');</script>");
-    /*
     if ($stmt->execute())
     {
         header("Location: empcar.php");
@@ -47,7 +44,7 @@ function deleteCar($carID) {
     else
     {
         echo "Insert Failed";
-    }*/
+    }
   }
   
 
