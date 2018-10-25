@@ -9,7 +9,7 @@ if($_SESSION['verified'])
 else
 {
     echo "Failed";
-    echo $_SESSION['verified'];
+    echo "Session: " . $_SESSION['verified'];
     //header("Location: carRentalBrowse.php");
 }
 
