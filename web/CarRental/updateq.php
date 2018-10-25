@@ -51,7 +51,7 @@ function getCarsDB() {
     return $data;
   }
 
-function fixNull($col)
+function fixNull($col, $db)
 {
     $lookup = "SELECT * FROM Cars WHERE carID = :carID";
     $stmt = $db->prepare($lookup);
@@ -69,35 +69,35 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     /* Check for NULL values */
     if ($make == "")
     {
-        $make = fixNull('make');
+        $make = fixNull('make', $db);
     } 
     else if ($model == "") 
     {
-        $model = fixNull('model');
+        $model = fixNull('model', $db);
     }
     else if ($mileage == "")
     {
-        $mileage = fixNull('mileage');
+        $mileage = fixNull('mileage', $db);
     }
     else if ($cost == "")
     {
-        $cost = fixNull('cost');
+        $cost = fixNull('cost', $db);
     } 
     else if ($rentalstatus == "")
     {
-        $rentalstatus = fixNull('rentalstatus');
+        $rentalstatus = fixNull('rentalstatus', $db);
     } 
     else if ($repairstatus == "") 
     {
-        $repairstatus = fixNull('repairstatus');
+        $repairstatus = fixNull('repairstatus', $db);
     } 
     else if ($renterfirst == "")
     {
-        $renterfirst = fixNull('renterfirst');
+        $renterfirst = fixNull('renterfirst', $db);
     } 
     else if ($renterlast = "")
     {
-        $renterlast = fixNull('renterlast');
+        $renterlast = fixNull('renterlast', $db);
     }
     
     
