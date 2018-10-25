@@ -68,9 +68,16 @@ function getCarsDB() {
         <label for="cost">Cost:</label>
         <input type="number", name="cost", id="cost"><br>
         <label for="rentalstatus">Rental Status:</label>
-        <input type="text", name="rentalstatus", id="rentalstatus"><br>
+        <select name="rentalstatus" id="rentalstatus">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+        </select><br>
         <label for="repairstatus">Repair Status:</label>
-        <input type="text", name="repairstatus", id="repairstatus"><br><br>
+        <select name="repairstatus" id="repairstatus">
+            <option value="inshop">In Shop</option>
+            <option value="needsrepair">Needs Repair</option>
+            <option value="okay">Okay</option>
+        </select><br><br>
         <input class="button" type="submit" value="Add">
     </form>
     </div>
