@@ -70,7 +70,6 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
     if ($make == "")
     {
         $make = fixNull('make', $db);
-        echo "called";
     } 
     else if ($model == "") 
     {
@@ -114,7 +113,7 @@ function updateCars($carID, $make, $model, $mileage, $cost, $rentalstatus,
             WHERE carid = :carID";
     
     $stmt = $db->prepare($sql);
-    echo "($cost, $mileage, $make, $model, $rentalstatus, $repairstatus, $renterfirstname, $renterlastname)";
+    //echo "($cost, $mileage, $make, $model, $rentalstatus, $repairstatus, $renterfirstname, $renterlastname)";
     $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
     $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
     $stmt->bindValue(":make", $make, PDO::PARAM_STR);
