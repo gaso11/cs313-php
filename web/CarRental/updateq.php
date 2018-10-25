@@ -1,8 +1,9 @@
 <?php
-
+session_start();
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
+    getVars();
 }
 else
 {
