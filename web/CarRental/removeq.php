@@ -4,7 +4,6 @@ session_start();
 if($_SESSION['verified'])
 {
     $carID = $_POST['carList'];
-    echo var_dump($carID);
     deleteCar($carID);
 }
 else
@@ -43,7 +42,7 @@ function deleteCar($carID) {
     }
     else
     {
-        echo "Insert Failed";
+        echo "Deletion Failed";
     }
   }
   
