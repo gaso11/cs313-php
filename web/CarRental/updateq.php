@@ -95,15 +95,15 @@ function editCar() {
             WHERE carid = :carid";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":carid", $carid, PDO::PARAM_INT);
-    $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
-    $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
-    $stmt->bindValue(":rentalstatus", $rentalstatus, PDO::PARAM_STR);
-    $stmt->bindValue(":repairstatus", $repairstatus, PDO::PARAM_STR);
+    $stmt->bindValue(":cost", $newCost, PDO::PARAM_INT);
+    $stmt->bindValue(":mileage", $newMileage, PDO::PARAM_INT);
+    $stmt->bindValue(":rentalstatus", $newRental, PDO::PARAM_STR);
+    $stmt->bindValue(":repairstatus", $newRepair, PDO::PARAM_STR);
     $stmt->bindValue(":first", $newfirst, PDO::PARAM_STR);
     $stmt->bindValue(":last", $newlast, PDO::PARAM_STR);
     if ($stmt->execute())
     {
-        echo "sql: $sql";
+        echo "CarID: $carid";
         echo "Mileage: $mileage";
         //header("Location: empcar.php");
     }
