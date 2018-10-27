@@ -56,6 +56,7 @@ function getCarsDB() {
 </header>
 <body>
     <h3 style="text-align: center;">Only fill out fields you want to change</h3>
+    
 <?php
     
 /* Make list of cars to remove */
@@ -69,10 +70,9 @@ foreach($cars as $car)
 }
 
 echo "<label for=\"mileage\">Mileage:</label>";
-return;
 ?>
 
-<label for="mileage">Mileage:</label>
+<input type="number">
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
@@ -92,11 +92,12 @@ return;
 <input type="text" name="renterfirstname" id="renterfirstname"><br><br>
 <label for="renterfirstname">Renter Last Name:</label>
 <input type="text" name="renterlastname" id="renterlastname"><br><br>
+<input class="button" type="submit" value="Update">
+</form>
+
     
 <?php
     
-echo "<input class=\"button\" type=\"submit\" value=\"Update\">";
-echo "</form>";
 
 ?>
 
