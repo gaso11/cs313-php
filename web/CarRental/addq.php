@@ -45,8 +45,8 @@ function dbConnect(){
 
 function addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus) {
     $db = dbConnect();
-    $sql = "INSERT INTO Cars (Cost, Mileage, Make, Model, RentalStatus, RepairStatus)
-            VALUES (:cost, :mileage, :make, :model, :rentalstatus, :repairstatus)";
+    $sql = "INSERT INTO Cars (Cost, Mileage, Make, Model, RentalStatus, RepairStatus,         renterfirstname, renterlastname)
+            VALUES (:cost, :mileage, :make, :model, :rentalstatus, :repairstatus, 'FREE', 'FREE')";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
     $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
@@ -54,6 +54,7 @@ function addCar($make, $model, $mileage, $cost, $rentalstatus, $repairstatus) {
     $stmt->bindValue(":model", $model, PDO::PARAM_STR);
     $stmt->bindValue(":rentalstatus", $rentalstatus, PDO::PARAM_STR);
     $stmt->bindValue(":repairstatus", $repairstatus, PDO::PARAM_STR);
+    
     if ($stmt->execute())
     {
         header("Location: empcar.php");
