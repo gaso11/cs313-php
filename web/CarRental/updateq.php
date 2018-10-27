@@ -31,6 +31,7 @@ if($_SESSION['verified'])
             if ($_POST['renterlastname'] != "")
                 $newlast = $_POST['renterlastname'];
             
+            /*
             echo "<p>Make: $newMake</p><br>";
             echo "<p>Model: $newModel</p><br>";
             echo "<p>Mileage: $newMileage</p><br>";
@@ -39,7 +40,10 @@ if($_SESSION['verified'])
             echo "<p>Repair: $newRepair</p><br>";
             echo "<p>First: $newfirst</p><br>";
             echo "<p>Last: $newlast</p><br>";
+            */
             
+            editCar();
+            return;
         }
     }
     
@@ -78,5 +82,33 @@ function getCarsDB() {
     $stmt->closeCursor();
     return $data;
   }
+
+function editCar() {
+    $db = dbConnect();
+    $sql = "UPDATE Cars
+            SET mileage = :mileage,
+                cost = :cost,
+                rentalstatus = :rentalstatus,
+                repairstatus = :repairstatus,
+                renterfirstname = :first,
+                renterlastname = :last
+            WHERE carid = :carid";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(":carid", $carid, PDO::PARAM_INT);
+    $stmt->bindValue(":cost", $cost, PDO::PARAM_INT);
+    $stmt->bindValue(":mileage", $mileage, PDO::PARAM_INT);
+    $stmt->bindValue(":rentalstatus", $rentalstatus, PDO::PARAM_STR);
+    $stmt->bindValue(":repairstatus", $repairstatus, PDO::PARAM_STR);
+    $stmt->bindValue(":first", $newfirst, PDO::PARAM_STR);
+    $stmt->bindValue(":last", $newlast, PDO::PARAM_STR);
+    if ($stmt->execute())
+    {
+        header("Location: empcar.php");
+    }
+    else
+    {
+        echo "Edit Failed";
+    }
+}
 
 ?>
