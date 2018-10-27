@@ -92,3 +92,24 @@ INSERT INTO Cars
 INSERT INTO Cars 
 (Cost, Mileage, Make, Model, RentalStatus, RepairStatus) VALUES
 (100, 25000, 'Ford', 'Transit', 'Closed', 'In Shop');
+
+/* Testing Searching */
+SELECT * FROM Cars WHERE make = 'Ford';
+SELECT * FROM Cars WHERE make LIKE '%F%';
+/* Cool that works */
+
+/* Adding password column */
+ALTER TABLE Employees
+ADD COLUMN Password VARCHAR;
+/* Giving myself a hashed password */
+UPDATE Employees
+SET password = '$2y$10$GXH3AnDULtI6scKx8z8Evu8rAUi2NsR/2DeZQJ5.6RkmXUJ/e4f5q'
+WHERE empid = 1;
+/* Seting to NOT NULL */
+ALTER TABLE employees
+ALTER COLUMN password SET NOT NULL;
+
+INSERT INTO Employees (firstname, password)
+VALUES ('admin', '$2y$10$8LqjE6uLAbselvORYDTf3u/VXBz8j.B.b3WeJ/hg2cvNi1udFyPl2');
+
+
