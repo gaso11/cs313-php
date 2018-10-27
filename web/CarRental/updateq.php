@@ -103,7 +103,9 @@ function editCar() {
     $stmt->bindValue(":last", $newlast, PDO::PARAM_STR);
     if ($stmt->execute())
     {
-        header("Location: empcar.php");
+        echo "sql: $sql";
+        echo "Mileage: $mileage";
+        //header("Location: empcar.php");
     }
     else
     {
