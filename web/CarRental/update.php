@@ -69,9 +69,9 @@ foreach($cars as $car)
 }
 
 echo "<label for=\"mileage\">Mileage:</label>";
-echo "<br><br><br><br><br><br>";
 ?>
 
+<label for="mileage">Mileage:</label>
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
 <label for="cost">Cost:</label>
