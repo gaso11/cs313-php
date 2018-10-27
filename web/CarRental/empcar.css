@@ -33,6 +33,10 @@ header .header{
     clear: both;
 }
 
+.hide {
+    display: none;
+}
+
 .addform select {
     width: 100%;
     clear: both;
