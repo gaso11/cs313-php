@@ -69,6 +69,7 @@ foreach($cars as $car)
 }
 
 echo "<label for=\"mileage\">Mileage:</label>";
+return;
 ?>
 
 <label for="mileage">Mileage:</label>
