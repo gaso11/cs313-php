@@ -72,10 +72,8 @@ function getCarsDB() {
                 <div class="col col-3">Model</div>
                 <div class="col col-4">Cost per day</div>
                 <div class="col col-5">Mileage</div>
-                <div class="col col-6">Time Start</div>
-                <div class="col col-7">Time End</div>
-                <div class="col col-8">Rental Status</div>
-                <div class="col col-9">Repair Status</div>
+                <div class="col col-6">Rental Status</div>
+                <div class="col col-7">Repair Status</div>
                 <div class="col col-10">Renter's First</div>
                 <div class="col col-11">Renter's Last</div>
             </li>
@@ -94,10 +92,6 @@ function getCarsDB() {
                     "$" . $car['cost'] . "</div>";
                 echo "<div class=\"col col-5\" data-label=\"Mileage\">" . 
                     $car['mileage'] . "</div>";
-                echo "<div class=\"col col-6\" data-label=\"TimeSt\">" . 
-                    $car['timestart'] . "</div>";
-                echo "<div class=\"col col-7\" data-label=\"TimeEnd\">" . 
-                    $car['timeend'] . "</div>";
                 echo "<div class=\"col col-8\" data-label=\"RentalSts\">" . 
                     $car['rentalstatus'] . "</div>";
                 echo "<div class=\"col col-9\" data-label=\"RepairSts\">" . 
