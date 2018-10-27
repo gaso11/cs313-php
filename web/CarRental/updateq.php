@@ -10,8 +10,36 @@ if($_SESSION['verified'])
         if ($car['carid'] == $carid)
         {
             $newMake = $car['make'];
-            echo "CarID: $carid";
-            echo "Make: $newMake";
+            $newModel = $car['model'];
+            $newMileage = $car['mileage'];
+            $newCost = $car['cost'];
+            $newRental = $car['rentalstatus'];
+            $newRepair = $car['repairstatus'];
+            $newfirst = $car['renterfirstname'];
+            $newlast = $car['renterlastname'];
+            
+            if ($_POST['mileage'] != "")
+                $newMileage = $_POST['mileage'];
+            if ($_POST['cost'] != "")
+                $newCost = $_POST['cost'];
+            if ($_POST['rentalstatus'] != "")
+                $newRental = $_POST['rentalstatus'];
+            if ($_POST['repairstatus'] != "")
+                $newRepair = $_POST['repairstatus'];
+            if ($_POST['renterfirstname'] != "")
+                $newfirst = $_POST['renterfirstname'];
+            if ($_POST['renterlastname'] != "")
+                $newlast = $_POST['renterlastname'];
+            
+            echo "<p>Make: $newMake</p><br>";
+            echo "<p>Model: $newModel</p><br>";
+            echo "<p>Mileage: $newMileage</p><br>";
+            echo "<p>Cost: $newCost</p><br>";
+            echo "<p>Rental: $newRental</p><br>";
+            echo "<p>Repair: $newRepair</p><br>";
+            echo "<p>First: $newfirst</p><br>";
+            echo "<p>Last: $newlast</p><br>";
+            
         }
     }
     
