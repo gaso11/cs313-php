@@ -42,7 +42,7 @@ if($_SESSION['verified'])
             echo "<p>Last: $newlast</p><br>";
             */
             
-            editCar($carid, $newCost, $newMileage);
+            editCar($carid, $newCost, $newMileage, $newRental, $newRepair, $newfirst, $newlast);
             return;
         }
     }
@@ -83,7 +83,7 @@ function getCarsDB() {
     return $data;
   }
 
-function editCar($carid, $newCost, $newMileage) {
+function editCar($carid, $newCost, $newMileage, $newRental, $newRepair, $newfirst, $newlast) {
     $db = dbConnect();
     $sql = "UPDATE Cars
             SET mileage = :mileage,
