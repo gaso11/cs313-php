@@ -71,7 +71,8 @@ foreach($cars as $car)
 
 ?>
 <!--This needs to be here for some reason...-->
-<input class="hide" type="number" name="fake"><br>
+<input class="hide" type="number" name="fake">
+<input class="hide" type="number" name="fake">
     
 <label for="mileage">Mileage:</label>
 <input type="number", name="mileage", id="mileage"><br><br>
