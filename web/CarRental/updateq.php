@@ -7,7 +7,7 @@ if($_SESSION['verified'])
     
     foreach ($cars as $car)
     {
-        if (if $car['carid'] == $carid)
+        if ($car['carid'] == $carid)
         {
             $newMake = $car['make'];
             echo "CarID: $carid";
