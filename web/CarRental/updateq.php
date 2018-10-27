@@ -10,7 +10,7 @@ if($_SESSION['verified'])
         if (if $car['carid'] == $carid)
         {
             $newMake = $car['make'];
-            echo "CarID: $carid"
+            echo "CarID: $carid";
             echo "Make: $newMake";
         }
     }
