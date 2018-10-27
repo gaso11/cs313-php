@@ -3,7 +3,17 @@ session_start();
 if($_SESSION['verified'])
 {
     $cars = getCarsDB();
-    getVars();
+    $carid = $_POST['carList'];
+    
+    foreach ($cars as $car)
+    {
+        if (if $car['carid'] == $carid)
+        {
+            $newMake = $car['make'];
+            echo "CarID: $carid"
+            echo "Make: $newMake";
+        }
+    }
     
 }
 else
@@ -40,14 +50,5 @@ function getCarsDB() {
     $stmt->closeCursor();
     return $data;
   }
-
-function getVars()
-{
-    $carID = $_POST['carList'];
-    echo "CarID: $carID";
-    $make = $cars[$carID];
-    echo "Make: $make";
-    echo var_dump($cars);
-}
 
 ?>
