@@ -67,13 +67,9 @@ foreach($cars as $car)
     echo "<option value=\"" . $car['carid'] . "\">" . $car['carid'] . " - "
         . $car['make'] . " " . $car['model'] . "</option><br><br>";
 }
-echo "<p>Stop</p>";
-    echo "<p>Stop</p>";
-    echo "<p>Stop</p>";
-    echo "<p>Stop</p>";
-    echo "<p>Stop</p>";
+
 echo "<label for=\"mileage\">Mileage:</label>";
-    
+echo "<br><br><br><br><br><br>";
 ?>
 
 <label for="mileage">Mileage:</label>
