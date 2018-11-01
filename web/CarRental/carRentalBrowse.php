@@ -59,6 +59,7 @@ $cars = getCarsDB();
     </form>
     <br>
     
+    <h4>Select a car you would like to rent from the list</h4>
     <!-- Rent option -->
     <?php
     
@@ -69,8 +70,8 @@ $cars = getCarsDB();
         if ($car['repairstatus'] == "Okay" && $car['rentalstatus'] == "Open")
             echo "<option value=\"" . $car['carid'] . "\">" . $car['make'] . " " . $car['model'] . "</option>";
     }
-    echo "<input class=\"button\" type=\"submit\" value=\"Delete\">";
-    echo "</form>";
+    echo "<input class=\"button\" type=\"submit\" value=\"Rent\">";
+    echo "</form><br>";
 
     ?>
     
