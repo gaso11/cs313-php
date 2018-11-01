@@ -31,7 +31,7 @@ function dbConnect(){
     }
   }
 
-function deleteEmp($carID) {
+function deleteEmp($empID) {
     $db = dbConnect();
     $sql = "DELETE FROM Employees WHERE empid = :empID";
     $stmt = $db->prepare($sql);
