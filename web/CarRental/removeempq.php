@@ -3,7 +3,7 @@ session_start();
 
 if($_SESSION['verified'])
 {
-    $empID = $_POST['carList'];
+    $empID = $_POST['empList'];
     deleteEmp($empID);
 }
 else
