@@ -55,6 +55,7 @@ function getDB() {
     </div>
 </header>
 <body>
+    <div class="addform">
     <form action="addempq.php" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username">
@@ -62,6 +63,7 @@ function getDB() {
         <input type="password" name="password" id="password">
         <input class="button" type="submit" name="submit" value="Add Employee">
     </form>
+    </div>
 </body>
 </html>
     

@@ -35,7 +35,7 @@ function dbConnect(){
 function addEmp($username, $password) {
     $hash = password_hash($password, PASSWORD_BCRYPT);
     $db = dbConnect();
-    $sql = "INSERT INTO Employees (username, password) VALUES (:username, :password)";
+    $sql = "INSERT INTO Employees (firstname, password) VALUES (:username, :password)";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":username", $username, PDO::PARAM_INT);
     $stmt->bindValue(":password", $hash, PDO::PARAM_INT);
