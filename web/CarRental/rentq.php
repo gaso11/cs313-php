@@ -12,9 +12,10 @@ foreach ($cars as $car)
         $newfirst = $_POST['firstname'];
         $newlast = $_POST['lastname'];
         if ($newfirst or $newlast == "")
+        {
             echo "<h1>First and last name are required</h1>";
-            echo "<h1>$newfirst $newlast<h1>";
             return;
+        }
         
         $newMake = $car['make'];
         $newModel = $car['model'];
