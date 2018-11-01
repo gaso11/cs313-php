@@ -62,7 +62,7 @@ echo "<select name=\"empList\" id=\"empList\">";
 foreach($emps as $emp) 
 {
     echo "<option value=\"" . $emp['empid'] . "\">" . $emp['empid'] . " - "
-        . $emp['firstname'] . " " . $emp['password'] . "</option>";
+        . $emp['firstname'] . " " . "</option>";
 }
 echo "<input class=\"button\" type=\"submit\" value=\"Delete\">";
 echo "</form>";
