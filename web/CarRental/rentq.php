@@ -14,6 +14,7 @@ foreach ($cars as $car)
         if ($newfirst or $newlast == "")
         {
             echo "<h1>First and last name are required</h1>";
+            echo "<h1>$newfirst $newlast<h1>";
             return;
         }
         
