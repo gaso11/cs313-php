@@ -58,6 +58,23 @@ $cars = getCarsDB();
         <input type="submit" value=">>"/>
     </form>
     <br>
+    
+    <!-- Rent option -->
+    <?php
+    
+    echo "<form class=\"addform\" action=\"rent.php\" method=\"POST\">";
+    echo "<select name=\"carList\" id=\"carList\">";
+    foreach($cars as $car) 
+    {
+        if ($car['repairstatus'] == "Okay" && $car['rentalstatus'] == "Open")
+            echo "<option value=\"" . $car['carid'] . "\">" . $car['make'] . " " . $car['model'] . "</option>";
+    }
+    echo "<input class=\"button\" type=\"submit\" value=\"Delete\">";
+    echo "</form>";
+
+    ?>
+    
+    <!-- Car List -->
     <div class="carTable">
         <h2>Cars Avaliable for Rent</h2>
         <ul class="table">
