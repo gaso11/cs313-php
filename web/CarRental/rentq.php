@@ -11,7 +11,7 @@ foreach ($cars as $car)
         $newRental = "Closed";
         $newfirst = $_POST['firstname'];
         $newlast = $_POST['lastname'];
-        if ($newfirst or $newlast == "")
+        if ($newfirst or $newlast == null)
         {
             echo "<h1>First and last name are required</h1>";
             echo "<h1>$newfirst $newlast<h1>";
