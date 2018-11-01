@@ -48,6 +48,10 @@ h3 {
     font-size: 40px;
 }
 
+h4 {
+    text-align: center;
+}
+
 .carTable {
     max-width: 1000px;
     margin-left: auto;
