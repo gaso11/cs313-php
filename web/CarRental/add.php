@@ -10,6 +10,7 @@ else
     header("Location: carRentalBrowse.php");
 }
 
+//These don't really need to be in here, but I'll leave it just in case
 function dbConnect(){
     try {
       $url = getenv('DATABASE_URL');
