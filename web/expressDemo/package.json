@@ -1,16 +1,15 @@
 {
-  "name": "web",
+  "name": "expressdemo",
   "version": "1.0.0",
-  "description": "",
-  "main": "jquery.js",
+  "description": "Express demo",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cool-ascii-faces": "^1.3.4",
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   }
 }
