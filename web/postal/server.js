@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
+app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 app.get("/", function(req, res) {
@@ -20,18 +20,32 @@ app.get("/info", function(req, res) {
     var option = req.query.mailType;
     
     var total = calcRate(weight, option);
+    var jsonstr = makeJsonStr(weight, option, total);
     var params = {weight: weight,
                   option: option,
                   total: total};
     
     res.render("info", {weight: weight,
-                  option: option,
-                  total: total});
+                        option: option,
+                        total: total,
+                        jsonstr: jsonstr});
 })
 
 app.listen(PORT, function(req, res) {
     console.log("The server is running on port " + PORT);
 });
+
+function makeJsonStr(weight, option, total) {
+    var text = "{ weight: \"";
+    text += weight;
+    text += "\", option: \"";
+    text += option;
+    text += "\", total: ";
+    text += total;
+    text += " }";
+    
+    return text;
+}
 
 function calcRate(weight, option) {
     var total = 0;
@@ -66,7 +80,7 @@ function calcRate(weight, option) {
             total = 1.10;
         }
     }
-    else if (option == "Large Envelops(Flats)")
+    else if (option == "Large Envelopes(Flats)")
     {
         if (weight <= 1)
             total = 1.00;
